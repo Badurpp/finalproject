@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Shrikhand';
+    background: #f55791;
+}
+/* Menu Bar */
+nav {
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ed3a7c;
+    padding: 0 1rem;
+    box-shadow: 0px 1px 10px #000000;
+}
+nav div a {
+    padding: 26px 1rem;
+    color: #ffd183;
+    transition: 0.5s ease;
+}
+nav div a:hover {
+    background: #e1205f;
+    color: #ffffff;
+}
+nav .cart {
+    color: #ffffff;
+    font-size: 25px;
+    transition: 0.3s ease-in;
+}
+nav .cart:hover {
+    color: #ffd183;
+}
+nav img {
+    width: 75px;
+}
+
+/* Main */
+.products {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px 50px;
+    box-shadow: 0 0 8px #000000;
+    background: #ffd183;
+}
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+/* Tabs */
+[data-tab-info] {
+    display: none;
+}  
+.active[data-tab-info] {
+    display: block;
+}
+.tabs {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 10px 0px;
+}  
+.tabs span {
+    color: #ffffff;
+    background: #e1205f;
+    padding: 10px 20px;
+    margin: 0 10px 10px 10px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px #ed3a7c;
+} 
+.tabs span:hover {
+    color: #ffd183;
+    background: #ed3a7c;
+    cursor: pointer;
+    box-shadow: none;
+}
+/* Card */
+.card-wrapper {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    width: 320px;
+    height: auto;
+    margin: 0 20px 20px 20px;
+    border-radius: 25px;
+    background: #ffffff;
+    box-shadow: 0 0 8px #000000;
+}
+.image-content, .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #ed3a7c;
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before, .overlay::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background: #ed3a7c;
+}
+.overlay::after {
+    width: 41px;
+    border-radius: 0 25px 0 0 ;
+    background: #ffffff;
+}
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #ffffff;
+    padding: 3px;
+}
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ed3a7c;
+}
+.name {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+}
+.desc {
+    font-size: 18px;
+    color: #707070;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+.button {
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 8px 16px;
+    background-color: #ed3a7c;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 14px;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    background: #e1205f;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ed3a7c;
+    box-shadow: 0 -1px 5px #000000;
+}
+.iconFooter img {
+    width: 100px;
+}
+.gridFooter {
+    margin: 5px 0px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px 100px;
+    justify-content: center;
+    align-items: center;
+}
+.copyright {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    color: #e8e8e8;
+    font-family: 'Nunito', sans-serif;
+}
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.links h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #ffd183;
+}
+.links div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.links div a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 .5rem;
+    padding: 7px;
+    font-size: 30px;
+    color: #ffffff;
+    background: #e1205f;
+    border-radius: 50%;
+    transition: 0.7s ease-in-out;
+}
+.links div a:hover {
+    color: #ed3a7c;
+    background: #ffffff;
+    transform: rotate(360deg);
+}

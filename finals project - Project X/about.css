@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Shrikhand';
+    background: #f55791;
+}
+/* Menu Bar */
+nav {
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ed3a7c;
+    padding: 0 1rem;
+    box-shadow: 0px 1px 10px #000000;
+}
+nav div a {
+    padding: 26px 1rem;
+    color: #ffd183;
+    transition: 0.5s ease;
+}
+nav div a:hover {
+    background: #e1205f;
+    color: #ffffff;
+}
+nav .cart {
+    color: #ffffff;
+    font-size: 25px;
+    transition: 0.3s ease-in;
+}
+nav .cart:hover {
+    color: #ffd183;
+}
+nav img {
+    width: 75px;
+}
+/* Main */
+
+/* Story */
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 200px;
+    margin: 30px 0;
+    background: #ffd183;
+    box-shadow: 0 0 5px #000000;
+}
+.story h1 {
+    margin-bottom: 15px;
+    font-size: 60px;
+    color: #e1205f;
+}
+.story-desc {
+    padding: 0 40px;
+    margin-bottom: 15px;
+    text-indent: 50px;
+    text-align: justify;
+    font-size: 23px;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+}
+/* Messaging */
+.messaging {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow: 0 0 5px #000000;
+}
+.message-title {
+    margin: 50px auto;
+    color: #e1205f;
+    text-align: center;
+    font-size: 30px;
+    max-width: 600px;
+    position: relative;
+}
+.message-title h1:before {
+    content: "";
+    display: block;
+    width: 400px;
+    height: 5px;
+    background: #e1205f;
+    left: 320px;
+    top: 50%;
+    position: absolute;
+}
+.message-title h1:after {
+    content: "";
+    display: block;
+    width: 400px;
+    height: 5px;
+    background: #e1205f;
+    right: 320px;
+    top: 50%;
+    position: absolute;
+}
+form {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px;
+    padding: 35px;
+    border: 3px solid #e1205f;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #000000;
+
+}
+.input-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 3px solid #e1205f;
+    border-radius: 15px;
+    color: #e1205f;
+    background: #e1205f;
+    font-size: 15px;
+    transition: 0.5s;
+}
+label {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #ffffff;
+    cursor: text;
+    transition: 0.3s;
+}
+button {
+    font-family: 'Shrikhand';
+    padding: 10px 0;
+    color: #e1205f;
+    outline: none;
+    border: 3px solid #e1205f;
+    border-radius: 20px;
+    width: 100%;
+    cursor: pointer;
+    background: linear-gradient(#e1205f 0 0) var(--p, 0) / var(--p, 0) no-repeat;
+    transition: 0.4s, background-position 0s;
+}
+button:hover {
+    color: #ffffff;
+    --p: 100%;
+}
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    color: #e1205f;
+    top: -35px;
+    font-size: 14px;
+}
+input:focus,
+input:valid,
+textarea:focus,
+textarea:valid {
+    background: #ffffff;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row .input-group {
+    flex-basis: 48%;
+}
+/* Footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ed3a7c;
+    box-shadow: 0 -1px 5px #000000;
+}
+.iconFooter img {
+    width: 100px;
+}
+.gridFooter {
+    margin: 5px 0px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px 100px;
+    justify-content: center;
+    align-items: center;
+}
+.copyright {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    color: #e8e8e8;
+    font-family: 'Nunito', sans-serif;
+}
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.links h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #ffd183;
+}
+.links div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.links div a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 .5rem;
+    padding: 7px;
+    font-size: 30px;
+    color: #ffffff;
+    background: #e1205f;
+    border-radius: 50%;
+    transition: 0.7s ease-in-out;
+}
+.links div a:hover {
+    color: #ed3a7c;
+    background: #ffffff;
+    transform: rotate(360deg);
+}
