@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>BreaChers</title>
+        <title>Order</title>
         <link href ="icon.jpg" rel="icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -22,126 +22,174 @@
                 <a href="order.html">Order</a>
             </div>
 
-            <a href="" class="cart"><i class='bx bxs-cart'></i></a>
+            <div class="icon-page"><i class='bx bx-cart'></i></div>
         </nav>
         <main>
-            <section class="products">
-                <div class="grid">
-                    <div class="tabs">
-                        <span data-tab-value="#tab_1">Crepes</span>
-                        <span data-tab-value="#tab_2">Drinks</span>
-                    </div>
-                
-                    <div class="tab-content">
-                        <div class="tabs__tab active" id="tab_1" data-tab-info>
-
-                            <div class="card-wrapper">
-                                <div class="card swiper-slide">
-                                    <div class="image-content">
-                                        <span class="overlay"></span>
-            
-                                        <div class="card-image">
-                                            <img src="crepe1.png" alt="" class="card-img">
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-content">
-                                        <h2 class="name">Mango Cream Crepe</h2>
-                                        <p class="desc">Satisfy your sweet tooth cravings with our heavenly 
-                                            fresh mango crepe roll, filled with fluffy whipped cream and sweet 
-                                            mango cubes! Order now and indulge in an appealing treat like no other.
-                                        </p>
-                                        
-                                        <button class="button">Add to cart</button>
-                                    </div>
-                                </div>
-                                <div class="card swiper-slide">
-                                    <div class="image-content">
-                                        <span class="overlay"></span>
-            
-                                        <div class="card-image">
-                                            <img src="crepe2.png" alt="" class="card-img">
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-content">
-                                        <h2 class="name">Matcha Boba Crepe</h2>
-                                        <p class="desc">Satisfy your sweet tooth cravings with our heavenly 
-                                            matcha crepe roll, filled with fluffy whipped cream and chewy tapioca 
-                                            pearls! Order now and indulge in an appealing treat like no other.
-                                        </p>
-            
-                                        <button class="button">Add to cart</button>
-                                    </div>
-                                </div>
-                                <div class="card swiper-slide">
-                                    <div class="image-content">
-                                        <span class="overlay"></span>
-            
-                                        <div class="card-image">
-                                            <img src="crepe3.png" alt="" class="card-img">
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-content">
-                                        <h2 class="name">Okinawa Milktea Crepe</h2>
-                                        <p class="desc">Featuring the creamy milk tea flavor that is filled with 
-                                            Okinawa-flavored whipped cream and chewy tapioca pearls, it's a dessert 
-                                            experience exciting and refreshing. 
-                                        </p>
-            
-                                        <button class="button">Add to cart</button>
-                                    </div>
-                                </div>
-                                <div class="card swiper-slide">
-                                    <div class="image-content">
-                                        <span class="overlay"></span>
-            
-                                        <div class="card-image">
-                                            <img src="crepe4.png" alt="" class="card-img">
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-content">
-                                        <h2 class="name">Chocolate Oreo Crepe</h2>
-                                        <p class="desc">Our delicate crepe is filled with whipped cream and crunchy oreo 
-                                            bits, making every bite a delicious adventure. Order now and make your day as 
-                                            sweet as chocolate lovingly on your tongue.
-                                        </p>
-            
-                                        <button class="button">Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="tabs__tab" id="tab_2" data-tab-info>
-
-                            <div class="card-wrapper">
-                                <div class="card swiper-slide">
-                                    <div class="image-content">
-                                        <span class="overlay"></span>
-            
-                                        <div class="card-image">
-                                            <img src="drink.png" alt="" class="card-img">
-                                        </div>
-                                    </div>
-            
-                                    <div class="card-content">
-                                            <h2 class="name">Mix Berries Quencher</h2>
-                                            <p class="desc">Quench your thirst and indulge in the delicious flavors of summer
-                                            with our Mix Berries Quencher! Perfectly blended for a refreshing burst of sweetness 
-                                            with every sip. Try it now and taste the berry-licious goodness!
-                                            </p>
-            
-                                            <button class="button">Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <section class="address">
+                <div class="add-title">
+                    <h1>My Address</h1>
                 </div>
+            <form action="cart.php" method="post">
+                <div class="form">
+                    <div class="row">
+                        <div class="input-group">
+                            <input type="text" name="fname" required> 
+                            <label for="fname">First Name </label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="lname" required>
+                            <label for="lname">Last Name</label> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <input type="email" name="email" required> 
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" name="phone" pattern="[0-9]{11}" class="place" required>
+                            <label for="phone">Contact no.</label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="address" required>
+                        <label for="address">Address</label>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <input type="text" name="brgy" required>
+                            <label for="Brgy">Barangay</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="city" required>
+                            <label for="City">City</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <input type="text" name="prov" required> 
+                            <label for="Provice">Provice</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="pCode" required>
+                            <label for="Postal">Postal Code</label>
+                        </div>
+                    </div> 
+                </div>
+            </section>
+            <!-- Products -->
+            <section class="products">
+                <div class="prod-title">
+                    <h1>Products</h1>
+                </div>
+                    <div class="grid">
+                        <div class="tabs">
+                            <span data-tab-value="#tab_1">Crepes</span>
+                            <span data-tab-value="#tab_2">Drinks</span>
+                        </div>
+                    
+                        <div class="tab-content">
+                            <div class="tabs__tab active" id="tab_1" data-tab-info>
+
+                                <div class="card-wrapper">
+                                    <div class="card swiper-slide">
+                                        <div class="image-content">
+                                            <span class="overlay"></span>
+                
+                                            <div class="card-image">
+                                                <img src="crepe1.png" alt="" class="card-img">
+                                            </div>
+                                        </div>
+                
+                                        <div class="card-content">
+                                            <h2 class="name">Mango Cream Crepe</h2>
+                                            <div>
+                                                <input type="text" name="quantity-crepe1" id="crepe1" value="0">
+                                                <label>  30php</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card swiper-slide">
+                                        <div class="image-content">
+                                            <span class="overlay"></span>
+                
+                                            <div class="card-image">
+                                                <img src="crepe2.png" alt="" class="card-img">
+                                            </div>
+                                        </div>
+                
+                                        <div class="card-content">
+                                            <h2 class="name">Matcha Boba Crepe</h2>
+                                            <div>
+                                                <input type="text" name="quantity-crepe2" id="crepe2" value="0">
+                                                <label>  25php</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card swiper-slide">
+                                        <div class="image-content">
+                                            <span class="overlay"></span>
+                
+                                            <div class="card-image">
+                                                <img src="crepe3.png" alt="" class="card-img">
+                                            </div>
+                                        </div>
+                
+                                        <div class="card-content">
+                                            <h2 class="name">Okinawa Milktea Crepe</h2>
+                                            <div>
+                                                <input type="text" name="quantity-crepe3" id="crepe3" value="0">
+                                                <label>  25php</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card swiper-slide">
+                                        <div class="image-content">
+                                            <span class="overlay"></span>
+                
+                                            <div class="card-image">
+                                                <img src="crepe4.png" alt="" class="card-img">
+                                            </div>
+                                        </div>
+                
+                                        <div class="card-content">
+                                            <h2 class="name">Chocolate Oreo Crepe</h2>
+                                            <div>
+                                                <input type="text" name="quantity-crepe4" id="crepe4" value="0">
+                                                <label>  25php</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tabs__tab" id="tab_2" data-tab-info>
+
+                                <div class="card-wrapper">
+                                    <div class="card swiper-slide">
+                                        <div class="image-content">
+                                            <span class="overlay"></span>
+                
+                                            <div class="card-image">
+                                                <img src="drink.png" alt="" class="card-img">
+                                            </div>
+                                        </div>
+                
+                                        <div class="card-content">
+                                                <h2 class="name">Mix Berries Quencher</h2>
+                                                <div>
+                                                    <input type="text" name="quantity-drink" id="drink" value="0">
+                                                    <label>  25php</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="submit" class="button-submit">
+                </form>
             </section>
         </main>
         <footer>
@@ -151,6 +199,7 @@
                 </section>
 
                 <section class="copyright">
+                    <p><i class='bx bxs-map'></i> Cavite National Highschool-Senior Highschool, Chief E. Martin St., Caridad, Cavite</p>
                     <h2>&copy 2023 BreaChers. All rights reserved.</h2>
                 </section>
 

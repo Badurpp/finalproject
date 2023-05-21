@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Shrikhand';
+    background: #f55791;
+}
+/* Menu Bar */
+nav {
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ed3a7c;
+    padding: 0 1rem;
+    box-shadow: 0px 1px 10px #000000;
+}
+nav div a {
+    padding: 26px 1rem;
+    color: #ffd183;
+    transition: 0.5s ease;
+}
+nav div.icon-page i{
+    font-size: 70px;
+    color: #ffd183;
+}
+nav .cart:hover {
+    color: #ffd183;
+}
+nav img {
+    width: 75px;
+}
+/* Main */
+.address {
+    margin: 20px 0;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0 0 5px #000000;
+}
+.address .customer {
+    font-size: 30px;
+}
+.address .full-address {
+    font-size: 20px;
+}
+.address .contact {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0 0;
+}
+.cart-products {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+    padding: 10px 0;
+    background: #ffffff;
+    box-shadow: 0 0 5px #000000;
+}
+.cart-title {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 30px;
+    color: #e1205f;
+}
+.cart-title h1 {
+    margin: 10px auto;
+    color: #e1205f;
+    text-align: center;
+    font-size: 40px;
+    max-width: 600px;
+    position: relative;
+}
+.cart-title h1:before {
+    content: "";
+    display: block;
+    width: 400px;
+    height: 5px;
+    background: #e1205f;
+    left: 280px;
+    top: 50%;
+    position: absolute;
+}
+.cart-title h1:after {
+    content: "";
+    display: block;
+    width: 400px;
+    height: 5px;
+    background: #e1205f;
+    right: 280px;
+    top: 50%;
+    position: absolute;
+}
+.container {
+    display: grid;
+    grid-template-columns: 80px 350px 200px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 100px;
+    padding: 10px;
+    background: #ffd183;
+    box-shadow: 0 0 5px #000000;
+}
+.container-empty {
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+    padding: 10px;
+    margin: 20px 0;
+    background: #ffd183;
+    box-shadow: 0 0 5px #000000;
+}
+.prod-img {
+    width: 80px;
+    border: 3px solid #e1205f;
+    border-radius: 50%;
+    padding: 5px;
+    background: #f55791;
+}
+.name {
+    color: #f55791;
+    text-shadow: 0 0 3px #ffffff;
+}
+.comp {
+    word-spacing: 40px;
+    color: #e1205f;
+}
+.total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 10px 30px;
+    background: #f55791;
+    text-shadow: 0 0 2px #ffffff;
+}
+.total .thank {
+    margin: 30px 0 0 0;
+    padding: 5px 10px;
+    font-size: 30px;
+    background: #ffd183;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #e1205f;
+    box-shadow: 0 2px 3px #000000;
+}
+/* Footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ed3a7c;
+    box-shadow: 0 -1px 5px #000000;
+}
+.iconFooter img {
+    width: 100px;
+}
+.gridFooter {
+    margin: 5px 0px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px 100px;
+    justify-content: center;
+    align-items: center;
+}
+.copyright {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    color: #e8e8e8;
+    font-family: 'Nunito', sans-serif;
+}
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.links h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #ffd183;
+}
+.links div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.links div a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 .5rem;
+    padding: 7px;
+    font-size: 30px;
+    color: #ffffff;
+    background: #e1205f;
+    border-radius: 50%;
+    transition: 0.7s ease-in-out;
+}
+.links div a:hover {
+    color: #ed3a7c;
+    background: #ffffff;
+    transform: rotate(360deg);
+}

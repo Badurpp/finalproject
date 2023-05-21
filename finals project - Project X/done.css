@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Shrikhand';
+    background: #f55791;
+    background-image: url(background-done.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 15% 10%;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+}
+.thanks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.picture {
+    display: flex;
+    align-items: center;
+}
+.thanks .logo-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    background-color: #ed3a7c;
+    border-radius: 50%;
+    border: 5px solid #e1205f;
+    box-shadow: 0 0 5px #000000;
+}
+.thanks .logo {
+    width: 120px;
+    border-radius: 40px;
+}
+.thanks .title-logo {
+    width: 500px;
+    height: 100px;
+}
+h1 {
+    font-size: 50px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #e1205f;
+    letter-spacing: 5px;
+    margin-top: 30px;
+}
+p {
+    font-size: 20px;
+    color: #414141;
+}
+.back {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+.back a {
+    font-size: 25px;
+    color: #ffffff;
+}
+@media (max-width: 1252px) {
+    body {
+        overflow-x: scroll;
+        background-repeat: no-repeat;
+        background-size:auto;
+        background-position: 50% 10%;
+    }
+    h1 {
+        font-size: 40px;
+        padding: 0 20px;
+        text-align: center;
+    }
+}
+@media (max-width: 758px) {
+    body {
+        overflow-x: scroll;
+        background-repeat: no-repeat;
+        background-size:auto;
+        background-position: 50% 10%;
+    }
+    .picture {
+        flex-direction: column;
+    }
+    .thanks .logo-border {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 140px;
+        height: 140px;
+        background-color: #ed3a7c;
+        border-radius: 50%;
+        border: 5px solid #e1205f;
+        box-shadow: 0 0 5px #000000;
+    }
+    .thanks .title-logo {
+        width: 470px;
+        height: 85px;
+    }
+    h1 {
+        font-size: 30px;
+        padding: 0 20px;
+        text-align: center;
+    }
+    p {
+        margin-top: 10px;
+        font-size: 20px;
+        color: #414141;
+    }
+    .back a {
+        font-size: 20px;
+        color: #ffffff;
+    }
+}

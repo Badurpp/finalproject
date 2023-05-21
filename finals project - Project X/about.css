@@ -29,12 +29,8 @@ nav div a:hover {
     background: #e1205f;
     color: #ffffff;
 }
-nav .cart {
-    color: #ffffff;
-    font-size: 25px;
-    transition: 0.3s ease-in;
-}
-nav .cart:hover {
+nav div.icon-page i{
+    font-size: 70px;
     color: #ffd183;
 }
 nav img {
@@ -113,7 +109,6 @@ form {
     border: 3px solid #e1205f;
     border-radius: 15px;
     box-shadow: 0 0 5px #000000;
-
 }
 .input-group {
     margin-bottom: 30px;
@@ -199,10 +194,17 @@ footer {
 }
 .copyright {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    font-size: 12px;
+    align-items: center;
+    row-gap: 5px;
+    font-size: 13px;
     color: #e8e8e8;
     font-family: 'Nunito', sans-serif;
+}
+.copyright p {
+    display: flex;
+    text-align: center;
 }
 .links {
     display: flex;
@@ -237,4 +239,52 @@ footer {
     color: #ed3a7c;
     background: #ffffff;
     transform: rotate(360deg);
+}
+@media (max-width: 1352px) {
+    .story {
+        padding: 20px 10px;
+    }
+    .story h1 {
+        font-size: 40px;
+    }
+    .story-desc {
+        padding: 0 20px;
+        font-size: 17px;
+    }
+}
+@media (max-width: 858px) {
+    body {
+        overflow-x: hidden;
+    }
+    .story {
+        padding: 40px 30px;
+        margin: 30px 0;
+    }
+    .story h1 {
+        font-size: 37px;
+    }
+    .story-desc {
+        padding: 0;
+        font-size: 17px;
+    }
+    .gridFooter {
+        margin: 5px 0px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    .iconFooter img{
+        width: 70px;
+    }
+    .copyright {
+        font-size: 8px;
+    }
+    .links h3 {
+        font-size: 18px;
+    }
+    .links div a {
+        font-size: 20px;
+    }
 }

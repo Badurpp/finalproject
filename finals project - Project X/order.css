@@ -29,12 +29,8 @@ nav div a:hover {
     background: #e1205f;
     color: #ffffff;
 }
-nav .cart {
-    color: #ffffff;
-    font-size: 25px;
-    transition: 0.3s ease-in;
-}
-nav .cart:hover {
+nav div.icon-page i{
+    font-size: 70px;
     color: #ffd183;
 }
 nav img {
@@ -42,17 +38,135 @@ nav img {
 }
 
 /* Main */
+/* Address */
+.add-title {
+    margin: 30px auto;
+    color: #e1205f;
+    text-align: center;
+    font-size: 30px;
+    max-width: 600px;
+    position: relative;
+}
+.add-title h1:before {
+    content: "";
+    display: block;
+    width: 400px;
+    height: 5px;
+    background: #e1205f;
+    left: 320px;
+    top: 50%;
+    position: absolute;
+}
+.add-title h1:after {
+    content: "";
+    display: block;
+    width: 400px;
+    height: 5px;
+    background: #e1205f;
+    right: 320px;
+    top: 50%;
+    position: absolute;
+}
+.address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow: 0 0 5px #000000;
+}
+.address .form {
+    margin: 20px;
+    padding: 30px 30px 0 30px;
+    border: 3px solid #e1205f;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #000000;
+}
+.address .input-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+.address input {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 3px solid #e1205f;
+    border-radius: 15px;
+    color: #e1205f;
+    background: #e1205f;
+    font-size: 15px;
+    transition: 0.5s;
+}
+.address label {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #ffffff;
+    cursor: text;
+    transition: 0.3s;
+}
+.address input:focus~label,
+.address input:valid~label {
+    color: #e1205f;
+    top: -35px;
+    font-size: 14px;
+}
+.address input:focus,
+.address input:valid {
+    background: #ffffff;
+}
+.address .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.address .row .input-group {
+    flex-basis: 48%;
+}
+/* Products */
 .products {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin: 20px 0;
     padding: 20px 50px;
     box-shadow: 0 0 8px #000000;
     background: #ffd183;
+}.prod-title {
+    margin: 50px auto;
+    color: #e1205f;
+    text-align: center;
+    font-size: 30px;
+    max-width: 600px;
+    position: relative;
+}
+.prod-title h1:before {
+    content: "";
+    display: block;
+    width: 400px;
+    height: 5px;
+    background: #e1205f;
+    left: 320px;
+    top: 50%;
+    position: absolute;
+}
+.prod-title h1:after {
+    content: "";
+    display: block;
+    width: 400px;
+    height: 5px;
+    background: #e1205f;
+    right: 320px;
+    top: 50%;
+    position: absolute;
 }
 .grid {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 200px 1100px;
 }
 /* Tabs */
 [data-tab-info] {
@@ -85,7 +199,6 @@ nav img {
 .card-wrapper {
     height: auto;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
 }
 .card {
@@ -157,19 +270,36 @@ nav img {
     text-align: center;
     font-family: 'Nunito', sans-serif;
 }
-.button {
-    border: none;
-    font-size: 16px;
-    color: #ffffff;
-    padding: 8px 16px;
-    background-color: #ed3a7c;
-    cursor: pointer;
-    border-radius: 6px;
-    margin: 14px;
-    transition: all 0.3s ease;
+.products .grid input {
+    width: 40px;
+    margin: 0 10px;
+    padding: 2px;
+    outline: 0;
+    border: 3px solid #e1205f;
+    border-radius: 8px;
+    font-size: 13px;
+    text-align: center;
+    transition: 0.5s;
 }
-.button:hover {
-    background: #e1205f;
+.products .grid label {
+    word-spacing: 10px; 
+}
+.button-submit {
+    font-family: 'Shrikhand';
+    margin: 20px 0;
+    padding: 10px 0;
+    color: #e1205f;
+    outline: none;
+    border: 3px solid #e1205f;
+    border-radius: 20px;
+    width: 25%;
+    cursor: pointer;
+    background: linear-gradient(#e1205f 0 0) var(--p, 0) / var(--p, 0) no-repeat;
+    transition: 0.4s, background-position 0s;
+}
+.button-submit:hover {
+    color: #ffffff;
+    --p: 100%;
 }
 
 /* Footer */
@@ -193,10 +323,17 @@ footer {
 }
 .copyright {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    font-size: 12px;
+    align-items: center;
+    row-gap: 5px;
+    font-size: 13px;
     color: #e8e8e8;
     font-family: 'Nunito', sans-serif;
+}
+.copyright p {
+    display: flex;
+    text-align: center;
 }
 .links {
     display: flex;
@@ -231,4 +368,95 @@ footer {
     color: #ed3a7c;
     background: #ffffff;
     transform: rotate(360deg);
+}
+@media (max-width: 1352px) {
+    .products {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        padding: 20px 50px;
+        box-shadow: 0 0 8px #000000;
+        background: #ffd183;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+
+    .tabs {
+        grid-area: 1 / 1 / 2 / 2;
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0px 0px 10px 0px;
+    }
+    .tab-content {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .card-wrapper {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media (max-width: 758px) {
+    body {
+        overflow-x: scroll;
+    }
+
+    .products {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        padding: 20px 50px;
+        box-shadow: 0 0 8px #000000;
+        background: #ffd183;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+
+    .tabs {
+        grid-area: 1 / 1 / 2 / 2;
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0px 0px 10px 0px;
+    }
+    .tab-content {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .card-wrapper {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .gridFooter {
+        margin: 5px 0px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    .iconFooter img{
+        width: 70px;
+    }
+    .copyright {
+        font-size: 8px;
+    }
+    .links h3 {
+        font-size: 18px;
+    }
+    .links div a {
+        font-size: 20px;
+    }
 }
